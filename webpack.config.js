@@ -60,7 +60,7 @@ module.exports = (env, argv) => {
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: './public/index.html',
-        favicon: './public/favicon.ico',
+        favicon: './public/future-logo.svg',
       }),
       ...(isProduction ? [
         new MiniCssExtractPlugin({

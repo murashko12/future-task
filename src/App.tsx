@@ -4,6 +4,7 @@ import { Dialog, DialogContent } from './components/ui/dialog'
 import type { Post, CreatePostDTO, UpdatePostDTO } from './types/post'
 import PostForm from './components/PostForm'
 import PostList from './components/PostList'
+import futureLogo from '../public/future-logo.svg'
 
 function App() {
     const [posts, setPosts] = useState<Post[]>(() => {
@@ -73,13 +74,11 @@ function App() {
     return (
         <div className="min-h-screen bg-gray-50">
             <div className="container mx-auto px-4 py-8">
-                <header className="mb-8">
+                <header className="mb-8 flex items-center gap-4">
+                    <img src={futureLogo} alt="логотип" className="h-20" />
                     <h1 className="text-3xl font-bold text-gray-900 mb-2">
                         Управление постами
                     </h1>
-                    <p className="text-gray-600">
-                        Простое CRUD приложение для управления постами
-                    </p>
                 </header>
 
                 <div className="mb-8">
